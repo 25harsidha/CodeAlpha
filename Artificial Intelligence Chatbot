@@ -1,0 +1,123 @@
+import java.util.Scanner;
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+public class AIChatBot {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("=================================");
+        System.out.println("      WELCOME TO AI CHATBOT");
+        System.out.println("=================================");
+
+        System.out.print("Enter your name: ");
+        String name = sc.nextLine();
+
+        int chatCount = 0;
+
+        System.out.println("\nHello " + name + "!");
+        System.out.println("Type 'bye' to exit.\n");
+
+        while (true) {
+
+            System.out.print("You: ");
+            String input = sc.nextLine().toLowerCase();
+
+            chatCount++;
+
+            if (input.equals("hello")) {
+                System.out.println("Bot: Hi! Nice to meet you.");
+            }
+
+            else if (input.equals("how are you")) {
+                System.out.println("Bot: I am doing great. Thanks for asking!");
+            }
+
+            else if (input.equals("what is java")) {
+                System.out.println("Bot: Java is an object-oriented programming language.");
+            }
+
+            else if (input.equals("what is python")) {
+                System.out.println("Bot: Python is a simple and powerful programming language.");
+            }
+
+            else if (input.equals("who created java")) {
+                System.out.println("Bot: Java was created by James Gosling.");
+            }
+
+            else if (input.equals("what is ai")) {
+                System.out.println("Bot: AI stands for Artificial Intelligence.");
+            }
+
+            else if (input.equals("what is machine learning")) {
+                System.out.println("Bot: Machine Learning helps computers learn from data.");
+            }
+
+            else if (input.equals("who are you")) {
+                System.out.println("Bot: I am an AI Chatbot developed in Java.");
+            }
+
+            else if (input.equals("what is cse")) {
+                System.out.println("Bot: CSE stands for Computer Science and Engineering.");
+            }
+
+            else if (input.equals("best programming language")) {
+                System.out.println("Bot: Java, Python, and C++ are among the most popular languages.");
+            }
+
+            else if (input.equals("time")) {
+                System.out.println("Bot: Current Time is " + LocalTime.now());
+            }
+
+            else if (input.equals("date")) {
+                System.out.println("Bot: Today's Date is " + LocalDate.now());
+            }
+
+            else if (input.equals("good morning")) {
+                System.out.println("Bot: Good Morning! Have a wonderful day.");
+            }
+
+            else if (input.equals("good evening")) {
+                System.out.println("Bot: Good Evening!");
+            }
+
+            else if (input.equals("thank you")) {
+                System.out.println("Bot: You're welcome!");
+            }
+
+            else if (input.equals("tell me a joke")) {
+                System.out.println("Bot: Why do programmers hate nature? It has too many bugs!");
+            }
+
+            else if (input.equals("i am happy")) {
+                System.out.println("Bot: That's great! Keep smiling.");
+            }
+
+            else if (input.equals("i am sad")) {
+                System.out.println("Bot: Don't worry. Every difficult situation will pass.");
+            }
+
+            else if (input.equals("favorite color")) {
+                System.out.println("Bot: I like all colors equally.");
+            }
+
+            else if (input.equals("chat count")) {
+                System.out.println("Bot: You have asked " + chatCount + " questions.");
+            }
+
+            else if (input.equals("bye")) {
+                System.out.println("Bot: Goodbye " + name + "!");
+                System.out.println("Bot: Total Questions Asked = " + chatCount);
+                break;
+            }
+
+            else {
+                System.out.println("Bot: Sorry, I don't understand that question.");
+            }
+        }
+
+        sc.close();
+    }
+}
